@@ -3,6 +3,7 @@ package com.patrykserek.flowplayground.app
 import android.app.Application
 import com.patrykserek.flowplayground.data.di.dataModule
 import com.patrykserek.flowplayground.data.service.BackgroundService
+import com.patrykserek.flowplayground.domain.di.domainModule
 import org.koin.android.ext.android.inject
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
@@ -20,7 +21,7 @@ class App : Application() {
     private fun initKoin() {
         startKoin {
             androidContext(this@App)
-            modules(dataModule)
+            modules(dataModule, domainModule)
         }
     }
 }
