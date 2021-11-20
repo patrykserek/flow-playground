@@ -12,7 +12,7 @@ class BackgroundService(
 ) {
 
     fun init() {
-        dataSource.observe()
+        dataSource.observeNumber()
             .onEach(dataPersistence::update)
             .launchIn(GlobalScope) //Fixme: Replace with proper coroutine scope later
     }

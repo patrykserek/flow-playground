@@ -9,7 +9,7 @@ class FakeDataSource : DataSource {
 
     private val random = Random(System.currentTimeMillis())
 
-    override fun observe(): Flow<Int> = flow {
+    override fun observeNumber(): Flow<Int> = flow {
         while (true) {
             emit(random.nextInt())
             delay(1000L)
