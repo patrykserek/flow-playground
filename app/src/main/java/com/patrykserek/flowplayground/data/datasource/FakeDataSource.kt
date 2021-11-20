@@ -1,4 +1,4 @@
-package com.patrykserek.flowplayground.data.source
+package com.patrykserek.flowplayground.data.datasource
 
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
