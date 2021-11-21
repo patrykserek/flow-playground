@@ -11,7 +11,7 @@ class FakeDataSource : DataSource {
 
     override fun observeNumber(): Flow<Int> = flow {
         while (true) {
-            emit(random.nextInt())
+            emit(random.nextInt(from = 0, until = 101))
             delay(1000L)
         }
     }
